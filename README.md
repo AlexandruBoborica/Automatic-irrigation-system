@@ -14,6 +14,10 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 #### Block scheme
 ![Block Scheme](Images/Schema_bloc.PNG)
 
+#### Electric scheme
+![Block Scheme](Images/Schema_bloc.PNG)
+
+#### Components
   | **Component**                | **Source**                | **Specifications**                            |
 |------------------------------|---------------------------|----------------------------------------------|
 | Arduino Uno                  | LAB                       | Microcontroller board, ATmega328P            |
