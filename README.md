@@ -11,7 +11,9 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 
   ### Hardware Design
 
-  
+#### Block scheme
+![Block Diagram](Images/block_diagram.png)
+
   | **Component**                | **Source**                | **Specifications**                            |
 |------------------------------|---------------------------|----------------------------------------------|
 | Arduino Uno                  | LAB                       | Microcontroller board, ATmega328P            |
