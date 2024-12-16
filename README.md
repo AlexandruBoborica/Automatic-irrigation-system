@@ -10,6 +10,21 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 
 
   ### Hardware Design
+  | **Component**                | **Source**                | **Specifications**                            |
+|------------------------------|---------------------------|----------------------------------------------|
+| Arduino Uno                  | Local electronics store / Online | Microcontroller board, ATmega328P, 5V operating voltage |
+| Soil Moisture Sensor         | Local electronics store / Online | Analog sensor, detects soil moisture level (0–1023) |
+| Water Pump                   | Local electronics store / Online | DC water pump, 5-12V operating voltage       |
+| Relay Module (Low-Voltage Trigger) | Local electronics store / Online | 3-pin relay, supports low-voltage trigger control |
+| 1602 LCD Module              | Local electronics store / Online | 16x2 character display, requires 5V power    |
+| Potentiometer                | Local electronics store / Online | 10kΩ rotary potentiometer for LCD contrast control |
+| RGB LED                      | Local electronics store / Online | Common cathode, Red-Green channels used      |
+| Resistors                    | Local electronics store / Online | 220Ω - 1kΩ (for RGB LED and LCD backlight)   |
+| Push Button                  | Local electronics store / Online | Momentary switch for manual control          |
+| Breadboard                   | Local electronics store / Online | Standard breadboard for prototyping          |
+| Jumper Wires                 | Local electronics store / Online | Male-to-male and male-to-female connectors   |
+| 9V Battery & Barrel Jack Connector | Local electronics store / Online | 9V power source for Arduino                  |
+
   
 
   ### Software Design
