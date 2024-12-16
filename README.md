@@ -12,7 +12,7 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
   ### Hardware Design
 
 #### Block scheme
-![Block Diagram](Images/block_diagram.png)
+![Block Diagram](Images/Schema_bloc.png)
 
   | **Component**                | **Source**                | **Specifications**                            |
 |------------------------------|---------------------------|----------------------------------------------|
