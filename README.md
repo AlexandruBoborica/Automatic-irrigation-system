@@ -12,9 +12,9 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
   ### Hardware Design
   | **Component**                | **Source**                | **Specifications**                            |
 |------------------------------|---------------------------|----------------------------------------------|
-| Arduino Uno                  | Local electronics store / Online | Microcontroller board, ATmega328P, 5V operating voltage |
-| Soil Moisture Sensor         | Local electronics store / Online | Analog sensor, detects soil moisture level (0–1023) |
-| Water Pump                   | Local electronics store / Online | DC water pump, 5-12V operating voltage       |
+| Arduino Uno                  | LAB                       | Microcontroller board, ATmega328P            |
+| Soil Moisture Sensor         |https://www.bitmi.ro       | Analog/Digital sensor, (0–1023 at 5V)        |
+| Submersible water pump       | https://www.bitmi.ro      | DC water pump, 5-12V operating voltage ,1,6L/min     |
 | Relay Module (Low-Voltage Trigger) | Local electronics store / Online | 3-pin relay, supports low-voltage trigger control |
 | 1602 LCD Module              | Local electronics store / Online | 16x2 character display, requires 5V power    |
 | Potentiometer                | Local electronics store / Online | 10kΩ rotary potentiometer for LCD contrast control |
