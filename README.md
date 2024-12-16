@@ -13,17 +13,19 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
   | **Component**                | **Source**                | **Specifications**                            |
 |------------------------------|---------------------------|----------------------------------------------|
 | Arduino Uno                  | LAB                       | Microcontroller board, ATmega328P            |
-| Soil Moisture Sensor         |https://www.bitmi.ro       | Analog/Digital sensor, (0–1023 at 5V)        |
-| Submersible water pump       | https://www.bitmi.ro      | DC water pump, 5-12V operating voltage ,1,6L/min     |
-| Relay Module (Low-Voltage Trigger) | Local electronics store / Online | 3-pin relay, supports low-voltage trigger control |
-| 1602 LCD Module              | Local electronics store / Online | 16x2 character display, requires 5V power    |
-| Potentiometer                | Local electronics store / Online | 10kΩ rotary potentiometer for LCD contrast control |
-| RGB LED                      | Local electronics store / Online | Common cathode, Red-Green channels used      |
-| Resistors                    | Local electronics store / Online | 220Ω - 1kΩ (for RGB LED and LCD backlight)   |
-| Push Button                  | Local electronics store / Online | Momentary switch for manual control          |
-| Breadboard                   | Local electronics store / Online | Standard breadboard for prototyping          |
-| Jumper Wires                 | Local electronics store / Online | Male-to-male and male-to-female connectors   |
-| 9V Battery & Barrel Jack Connector | Local electronics store / Online | 9V power source for Arduino                  |
+| Soil Moisture Sensor         | https://www.bitmi.ro      | Analog/Digital sensor, (0–1023 at 5V)        |
+| Submersible water pump       | https://www.bitmi.ro      | DC water pump, 5-12V operating voltage ,1.6L/min|
+| Relay Module (Low-Voltage Trigger) | https://www.bitmi.ro| 3-pin relay, supports low-voltage trigger control|
+| 1602 LCD Module              | LAB                       | 16x2 character display,  5V                  |
+| Potentiometer                | LAB                       | 10kΩ rotary potentiometer                    |
+| RGB LED                      | LAB                       | Common cathode                               |
+| Resistors                    | LAB                       | 220Ω - 1kΩ                                   |
+| Push Button                  | LAB                       | Momentary switch for manual control          |
+| Breadboard                   | LAB                       | Standard breadboard for prototyping          |
+| Jumper Wires                 | LAB                       | Male-to-male and male-to-female connectors   |
+| 9V Battery                   | Local electronics store   | 9V power supply                              |
+| Barrel Jack Connector        | LAB                       | Battery - Arduino connector                  |
+| ESP8266 ESP 01 module        | https://www.bitmi.ro      | 3.3V , 2.4GHz can conenct to Wi-fi           |
 
   
 
