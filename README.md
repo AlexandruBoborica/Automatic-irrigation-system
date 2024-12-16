@@ -11,13 +11,13 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 
   ### Hardware Design
 
-#### Block scheme
-![Block Scheme](Images/Schema_bloc.PNG)
+  #### Block scheme
+  ![Block Scheme](Images/Schema_bloc.PNG)
 
-#### Electric scheme
-![Block Scheme](Images/Schema_bloc.PNG)
+  #### Electric scheme
+  ![Electric Scheme](Images/schema_electrica.PNG)
 
-#### Components
+  #### Components
   | **Component**                | **Source**                | **Specifications**                            |
 |------------------------------|---------------------------|----------------------------------------------|
 | Arduino Uno                  | LAB                       | Microcontroller board, ATmega328P            |
@@ -35,6 +35,8 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 | Barrel Jack Connector        | LAB                       | Battery - Arduino connector                  |
 | ESP8266 ESP 01 module        | https://www.bitmi.ro      | 3.3V , 2.4GHz can conenct to Wi-fi           |
 | Plastic hose                 | Local store               | The water is pumped through it               |
+  ### Partial Montage
+  ![Partial Montage](Images/Montaj_fizic.jpeg)
 
   
 
