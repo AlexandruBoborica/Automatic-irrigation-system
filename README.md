@@ -35,8 +35,39 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 | Barrel Jack Connector        | LAB                       | Battery - Arduino connector                  |
 | ESP8266 ESP 01 module        | https://www.bitmi.ro      | 3.3V , 2.4GHz can conenct to Wi-fi           |
 | Plastic hose                 | Local store               | The water is pumped through it               |
-  ### Partial Montage
+  #### Partial Montage
   ![Partial Montage](Images/Montaj_fizic.jpeg)
+  #### Pin layout
+  1.LCD Module (Parallel Communication):
+  Pins 9, 10, 11, 12 (Arduino Digital Pins) → DB4, DB5, DB6, DB7 (LCD Data Pins):
+  These pins are used for data communication between the Arduino and the LCD. 
+  Pin 8 (Arduino Digital Pin) → EN (Enable Pin on LCD):
+  The enable pin activates communication between the Arduino and LCD. 
+  Pin 7 (Arduino Digital Pin) → RS (Register Select on LCD):
+  The RS pin is used to switch between command and data modes. 
+  2.Soil Moisture Sensor:
+  Pin 6 (Arduino Digital Pin) → D0 (Digital Output on Sensor):
+  Pin 6 reads the digital output from the soil moisture sensor. The digital pin (D0) was chosen instead of analog (A0) because constant measurement is unnecessary. Instead, it triggers the water pump when soil      moisture drops below a threshold.
+  3.Pushbutton (Manual Control):
+  Pin 5 (Arduino Digital Pin) → Pushbutton:
+  The button is connected with a pull-up resistor to ensure the pin reads HIGH by default and LOW when the button is pressed. 
+  4.RGB LED (Status Indicator):
+  Pin 4 (Arduino Digital Pin) → Red Pin on RGB LED:
+  Indicates a warning state (e.g., dry soil).
+  Pin 3 (Arduino Digital Pin) → Green Pin on RGB LED:
+  Indicates a safe state (e.g., optimal soil moisture). 
+  5.Relay Module (Pump Activation):
+  Pin 2 (Arduino Digital Pin) → Relay Module Input:
+  Pin 2 controls the relay, which switches the pump on or off based on the soil moisture sensor's reading.
+  Relay Power Circuit:
+  COM (Relay Common Terminal) → VIN (Arduino Input for External 9V Battery):
+  The common terminal connects to the VIN pin, allowing the 9V battery to power the pump. The 9V battery ensures the pump receives sufficient power, as the Arduino’s 5V pin may not supply enough current.
+  NO (Normally Open on Relay) → Pump Positive Terminal:
+  The normally open (NO) terminal connects to the pump's positive terminal. This ensures the pump activates only when the relay closes (soil is dry).
+  GND (Pump Ground Terminal) → GND (Arduino):
+  The pump's ground wire connects to the Arduino's GND for a common reference.
+
+  
 
   
 
