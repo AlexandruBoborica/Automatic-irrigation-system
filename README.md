@@ -37,6 +37,13 @@ The purpose of this project is the maintenance of a plant or a garden or even a 
 | Plastic hose                 | Local store               | The water is pumped through it               |
   #### Partial Montage
   ![Partial Montage](Images/Montaj_fizic.jpeg)
+  ####
+  The hardware functionality of the automatic irrigation system involves multiple interconnected components to achieve an efficient and reliable setup. The core of the system is the Arduino UNO microcontroller,     which serves as the central processing unit. The soil moisture sensor detects soil moisture levels and communicates a digital output to pin 6 on the Arduino. This triggers actions based on predefined        
+  thresholds, such as turning on the water pump. The relay module, connected to pin 2, acts as a switch to control the DC water pump. The relay’s COM terminal is connected to VIN (9V battery supply), and the NO     terminal connects to the pump’s positive terminal, ensuring sufficient power delivery. The LCD 1602 display is connected via parallel communication using digital pins 9–12 (data lines DB4–DB7), pin 8 (EN), and    pin 7 (RS) to display real-time sensor values and system status. A pushbutton connected to pin 5 with a pull-up resistor provides manual control for the system, while an RGB LED (connected to pins 3 and 4 for 
+  red   and green) visually indicates the soil status: dry or normal. Power is supplied through a 9V battery connected to the Arduino’s VIN pin, which also powers the pump through the relay. The Arduino's 5V and 
+  GND pins    distribute power to the moisture sensor, relay module, and LCD. Energy consumption is minimized by limiting continuous measurements of soil moisture and running the pump only when necessary, 
+  ensuring efficient   operation. This hardware configuration integrates communication, control, and energy management to automate irrigation effectively.
+  
   #### Pin layout
   1.LCD Module (Parallel Communication):
   Pins 9, 10, 11, 12 (Arduino Digital Pins) → DB4, DB5, DB6, DB7 (LCD Data Pins):
