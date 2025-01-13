@@ -161,14 +161,24 @@ This setup effectively combines sensors, actuators, and displays to create a sma
       }
   } ```
 
+  The LiquidCrystal library was chosen for this project because it provides a straightforward way to control character LCD displays, such as the commonly used 16x2 or 20x4 models. These displays are often based on the Hitachi HD44780 driver, and the library simplifies the process of initializing the display, printing text, and managing cursor positions. Using this library eliminates the need to write low-level code to handle timing, communication, and control commands for the LCD, allowing the focus to remain on building project functionality. In this project, the LCD plays a critical role in providing real-time feedback by displaying soil moisture levels and the system's status (e.g., "Moisture: X," "Status: Dry"). The LiquidCrystal library's flexibility and ease of use make it an ideal choice for implementing this vital feature.
   
 
+The project is built around a soil moisture monitoring system, integrating a moisture sensor, a relay for irrigation control, an LCD for visual feedback, and LEDs for quick status indication. The code is organized into two main functions: setup, where all components are initialized, and loop, where the system logic runs. In the loop, the moisture sensor periodically measures soil moisture, and the readings are displayed on the LCD. If the moisture level drops below a threshold, the relay activates irrigation, and a blinking red LED signals dryness. Otherwise, a green LED indicates optimal conditions, and the relay remains off.
 
+Validation was performed iteratively. The moisture sensor was calibrated with soil samples of varying humidity, and the LCD output was checked for accuracy. The relay and LEDs were tested under simulated conditions to ensure they responded appropriately to dry and humid states. This step-by-step approach confirmed that all components interact correctly and meet the project’s requirements.
+
+The soil moisture sensor provides an analog output value that ranges from 0 to approximately 1000 (or potentially up to 1100, depending on the sensor's exact model and environmental factors). This value corresponds to the soil's moisture level, with lower values indicating wetter soil and higher values indicating dryness. To calibrate the sensor, I tested it in controlled conditions by inserting it into dry soil, moist soil, and fully saturated soil to observe the range of output values. These tests helped identify thresholds, such as the dryness level at which irrigation needs to activate (e.g., above 500).
+
+The sensor measures moisture by detecting changes in the electrical conductivity of the soil. Wet soil conducts electricity better, resulting in lower resistance and, thus, lower sensor values. Conversely, dry soil has higher resistance, leading to higher values. This principle forms the basis for interpreting the sensor readings.
+
+A delay of 2 seconds between measurements is implemented to allow the sensor to stabilize and to reduce noise or fluctuations in the readings. This interval ensures more reliable data without continuously polling the sensor, which could lead to unnecessary power consumption and potential overheating. This periodic measurement balances accuracy with efficiency, ensuring the system operates optimally.
   ### Obtained results
 
-
-
+  Video : https://youtube.com/shorts/HPF-jjIN3U0
 
 
   ### Bibliography
-
+ https://www.arduino.cc/reference/en
+ https://www.arduino.cc/en/Reference/LiquidCrystal
+ https://forum.arduino.cc
