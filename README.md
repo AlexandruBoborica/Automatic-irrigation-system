@@ -91,11 +91,83 @@ This setup effectively combines sensors, actuators, and displays to create a sma
 
   ### Software Design
 
+  ```arduino
+  #include <Arduino.h>
+  #include <Wire.h>
+  #include <LiquidCrystal.h>
+
+  #define RELAY_PIN 2         
+  #define SOIL_SENSOR_PIN A0  
+  #define RED_LED_PIN 4       
+  #define GREEN_LED_PIN 3     
+  #define Start_btn 3
+  
+  LiquidCrystal lcd(7, 8, 9, 10, 11, 12); // (rs, enable, d4, d5, d6, d7)
+  
+  int water;                  
+  unsigned long lastMeasureTime = 0;  
+  const unsigned long measureInterval = 2000; // masor umiditatea la 2 sec
+  
+  unsigned long lastBlinkTime = 0;     // Timestamp for last blink
+  const unsigned long blinkInterval = 500; // interval blink
+  bool redLedState = false;            // Current state of the red LED
+  
+  void setup() {
+      pinMode(RELAY_PIN, OUTPUT);
+      pinMode(RED_LED_PIN, OUTPUT);
+      pinMode(GREEN_LED_PIN, OUTPUT);
+      pinMode(Start_btn, INPUT);
+  
+      Serial.begin(9600);
+      Serial.println("Soil Moisture Sensor");
+  
+      lcd.begin(16, 2); 
+      lcd.print("Moisture: ----"); 
+  }
+  
+  void loop() {
+      unsigned long currentTime = millis(); // Get the current time
+  
+      if (currentTime - lastMeasureTime >= measureInterval) {
+          lastMeasureTime = currentTime; // Update la timp
+  
+          water = analogRead(SOIL_SENSOR_PIN);
+  
+          Serial.print("Soil Moisture Value: ");
+          Serial.println(water);
+  
+          lcd.setCursor(0, 0); 
+          lcd.print("Moisture: ");
+          lcd.print(water);   
+          lcd.print("    ");   
+      }
+  
+      if (water > 500) { 
+          digitalWrite(RELAY_PIN, LOW);       
+          digitalWrite(GREEN_LED_PIN, LOW); 
+          if (currentTime - lastBlinkTime >= blinkInterval) {
+              lastBlinkTime = currentTime;         
+              redLedState = !redLedState;           // toggle la ledul rosu
+              digitalWrite(RED_LED_PIN, redLedState); 
+          }   
+          lcd.setCursor(0, 1); 
+          lcd.print("Status: Dry     "); 
+      } else { 
+          digitalWrite(RELAY_PIN, HIGH);     
+          digitalWrite(GREEN_LED_PIN, HIGH);  
+          digitalWrite(RED_LED_PIN , LOW);
+          lcd.setCursor(0, 1); 
+          lcd.print("Status: Humid "); 
+      }
+  } ```
+
+  
+
 
   ### Obtained results
 
 
-  ### Journal
+
 
 
   ### Bibliography
