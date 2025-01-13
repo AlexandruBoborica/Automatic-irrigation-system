@@ -159,7 +159,7 @@ This setup effectively combines sensors, actuators, and displays to create a sma
           lcd.setCursor(0, 1); 
           lcd.print("Status: Humid "); 
       }
-  } ```
+  } 
 
   The LiquidCrystal library was chosen for this project because it provides a straightforward way to control character LCD displays, such as the commonly used 16x2 or 20x4 models. These displays are often based on the Hitachi HD44780 driver, and the library simplifies the process of initializing the display, printing text, and managing cursor positions. Using this library eliminates the need to write low-level code to handle timing, communication, and control commands for the LCD, allowing the focus to remain on building project functionality. In this project, the LCD plays a critical role in providing real-time feedback by displaying soil moisture levels and the system's status (e.g., "Moisture: X," "Status: Dry"). The LiquidCrystal library's flexibility and ease of use make it an ideal choice for implementing this vital feature.
   
