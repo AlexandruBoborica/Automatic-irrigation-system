@@ -180,6 +180,6 @@ A delay of 2 seconds between measurements is implemented to allow the sensor to 
 
 
   ### Bibliography
- https://www.arduino.cc/reference/en
- https://www.arduino.cc/en/Reference/LiquidCrystal
+ https://www.arduino.cc/reference/en <br>
+ https://www.arduino.cc/en/Reference/LiquidCrystal <br>
  https://forum.arduino.cc
